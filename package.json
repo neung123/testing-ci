@@ -1,0 +1,12 @@
+{
+  "name": "test-cicd",
+  "description": "Simple Travis-CI check for JSHint (Code Linting)",
+  "author": "neung123",
+  "version": "1.0.0",
+  "devDependencies": {
+    "jshint": "^2.10.2"
+  },
+  "scripts": {
+    "test": "jshint hello.js"
+  }
+}
