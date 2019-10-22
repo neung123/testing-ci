@@ -28,13 +28,14 @@ jobs:
   work2:
     docker:
       # specify the version you desire here
-      - image: google/cloud-sdk:latest
+#       - image: google/cloud-sdk:latest
+      - image: circleci/node:latest
       
     working_directory: ~/repo
 
     steps:
       - checkout
-      - run: gcloud --version
+#       - run: gcloud --version
       - run: npm test
 workflows:
   version: 2
