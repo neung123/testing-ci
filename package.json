@@ -8,6 +8,7 @@
     "@types/node": "^11.13.11",
     "@types/protobufjs": "^6.0.0",
     "typescript": "^3.4.3"
+    "firebase": "^5.11.1",
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",
