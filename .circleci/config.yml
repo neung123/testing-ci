@@ -13,6 +13,8 @@ jobs:
 
     steps:
       - checkout
-      - run: yarn
+      - run: rm -rf ~/.node-gyp
+      - run: rm -rf ~/.npmrc
       - run: npm install grpc --verbose
+      - run: yarn
       - run: yarn test
