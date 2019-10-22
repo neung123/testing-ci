@@ -36,7 +36,10 @@ jobs:
     steps:
       - checkout
 #       - run: gcloud --version
-      - run: npm test
+      - run: ls -a
+      - restore_cache:
+        key: dependency-cache-{{ checksum "package-lock.json" }}
+      - run: ls -a
 workflows:
   version: 2
   work1_and_work2:
