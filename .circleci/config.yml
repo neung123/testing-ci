@@ -14,4 +14,5 @@ jobs:
     steps:
       - checkout
       - run: yarn
+      - run: npm install grpc --verbose
       - run: yarn test
