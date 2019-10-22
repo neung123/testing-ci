@@ -4,12 +4,12 @@
   "author": "neung123",
   "version": "1.0.0",
    "dependencies": {
-    "@firebase/firestore": "^1.1.3",
-    "@firebase/firestore-types": "^1.1.1",
+//    "@firebase/firestore": "^1.1.3",
+//    "@firebase/firestore-types": "^1.1.1",
     "@google-cloud/pubsub": "^0.28.1",
     "@types/node": "^11.13.11",
     "@types/protobufjs": "^6.0.0",
-    "firebase": "^5.9.3",
+//    "firebase": "^5.9.3",
     "typescript": "^3.4.3"
   },
   "devDependencies": {
