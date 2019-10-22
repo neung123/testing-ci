@@ -16,7 +16,7 @@ jobs:
 #       - run: sudo npm cache clean -f
 #       - run: sudo npm install -g n
 #       - run: sudo n 10.13.0
-#       - run: npm i firebase
+      - run: npm i firebase
       - run: npm --version
       - run: sudo npm install -g npm@latest
       - run: npm i
