@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  build:
+  work1:
     docker:
       # specify the version you desire here
       - image: circleci/node:latest
@@ -13,8 +13,6 @@ jobs:
 
     steps:
       - checkout
-      - setup_remote_docker: 
-         docker_layer_caching: true
       - run: sudo npm cache clean -f
       - run: sudo npm install -g n
       - run: sudo n 10.13.0
@@ -22,24 +20,21 @@ jobs:
       - run: sudo npm install -g npm@latest
       - run: npm i
       - run: npm test
-  build2:
+  work2:
+    docker:
+      # specify the version you desire here
+      - image: google/cloud-sdk:latest
+      
     working_directory: ~/repo
+
     steps:
       - checkout
-      - machine:
-        docker_layer_caching: true
-      - run:
-          name: build image
-          command: docker build -t circleci/node:latest .
-      - run: npm --version
-      - run: ls -a
-      - run: npm i
-      - run: npm test
+      - run: gcloud --version
 workflows:
   version: 2
-  build_and_build2:
+  work1_and_work2:
     jobs:
-      - build
-      - build2:
+      - work1
+      - work2:
           requires:
-            - build
+            - work1
