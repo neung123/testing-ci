@@ -38,7 +38,7 @@ jobs:
 #       - run: gcloud --version
       - run: ls -a
       - restore_cache:
-        key: dependency-cache-{{ checksum "package-lock.json" }}
+          key: dependency-cache-{{ checksum "package-lock.json" }}
       - run: ls -a
 workflows:
   version: 2
