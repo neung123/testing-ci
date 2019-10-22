@@ -16,6 +16,7 @@ jobs:
       - run: rm -rf ~/.node-gyp
       - run: rm -rf ~/.npmrc
       - run: sudo npm -g uninstall node-gyp
+      - run: sudo npm install -g node-pre-gyp
       - run: npm install grpc --verbose
       - run: npm i
       - run: npm test
