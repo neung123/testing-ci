@@ -35,6 +35,7 @@ jobs:
     steps:
       - checkout
       - run: gcloud --version
+      - run: npm test
 workflows:
   version: 2
   work1_and_work2:
