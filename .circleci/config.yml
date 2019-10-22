@@ -19,6 +19,7 @@ jobs:
 #       - run: sudo npm install -g node-pre-gyp
 #       - run: npm install grpc --verbose
       - run: sudo npm cache clean -f
+      - run: npm --version
 #       - run: sudo npm install -g n
 #       - run: sudo n 10.13.0
       - run: sudo npm install -g npm@latest
