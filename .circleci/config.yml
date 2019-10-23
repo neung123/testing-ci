@@ -22,7 +22,7 @@ jobs:
       - run: ls -a
 #       - run: gcloud --version
       - run: |
-            ./google-cloud-sdk/install.sh
+            ./google-cloud-sdk/install.sh --help
             -/home/circleci/.bashrc
       - run: gcloud --version
       - restore_cache:
