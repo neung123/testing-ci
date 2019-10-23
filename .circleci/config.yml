@@ -22,7 +22,7 @@ jobs:
       - run: ls -a
 #       - run: gcloud --version
       - run: |
-            ./google-cloud-sdk/install.sh --help
+            ./google-cloud-sdk/install.sh
             --disable-installation-options
             --bash-completion=false
             --path-update=false
