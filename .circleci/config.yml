@@ -15,8 +15,12 @@ jobs:
       - checkout
       - run: npm --version
       - run: sudo npm install -g npm@latest
-      - run: curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-268.0.0-linux-x86_64.tar.gz
-      - run: tar zxvf ~/google-cloud-sdk
+#       - run: curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-268.0.0-linux-x86_64.tar.gz
+#       - run: tar zxvf ~/google-cloud-sdk
+      - run: wget https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-267.0.0-linux-x86_64.tar.gz
+      - run: tar xvzf google-cloud-sdk-267.0.0-linux-x86_64.tar.gz
+      - run: ls -a
+      - run: gcloud --version
       - run: ./google-cloud-sdk/install.sh
       - run: gcloud --version
       - restore_cache:
