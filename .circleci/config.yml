@@ -21,7 +21,7 @@ jobs:
       - run: tar xvzf google-cloud-sdk-267.0.0-linux-x86_64.tar.gz
       - run: ls -a
 #       - run: gcloud --version
-      - run: ./google-cloud-sdk/install.sh
+      - run: CLOUDSDK_CORE_DISABLE_PROMPTS=1 ./google-cloud-sdk/install.sh
       - run: gcloud --version
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
