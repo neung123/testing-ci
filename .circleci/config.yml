@@ -23,7 +23,10 @@ jobs:
 #       - run: gcloud --version
       - run: |
             ./google-cloud-sdk/install.sh --help
-            -/home/circleci/.bashrc
+            --disable-installation-options
+            --bash-completion=false
+            --path-update=false
+            --usage-reporting=false
       - run: gcloud --version
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
