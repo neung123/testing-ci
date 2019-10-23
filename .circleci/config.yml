@@ -23,8 +23,8 @@ jobs:
 #       - run: ./google-cloud-sdk/install.sh --disable-installation-options --bash-completion=false --path-update=false --usage-reporting=false
       - run: pwd
       - run: if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; export CLOUDSDK_CORE_DISABLE_PROMPTS=1; curl https://sdk.cloud.google.com | bash; fi
-      - run: source $HOME/google-cloud-sdk/path.bash.inc
-      - run: source $HOME/google-cloud-sdk/completion.bash.inc
+      - run: source /home/circleci/google-cloud-sdk/path.bash.inc
+      - run: source /home/circleci/google-cloud-sdk/completion.bash.inc
       - run: gcloud --quiet version
       - run: gcloud --quiet components update
       - run: gcloud --version
